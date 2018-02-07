@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <style>
+    body{
+      width: 300px;
+    }
+    header{
+      background: #f7f5f5;
+      overflow: hidden;
+    }
+    header h1{
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    main{
+      /*background: #000;*/
+      font-size: 1rem;
+    }
+    main .notice{
+      font-size: 0.8rem;
+      margin: 0 0 10px 0;
+    }
+    main section{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      background: #ddd;
+      margin: 0 0 10px 0;
+    }
+    main section h4{
+      width: 100%;
+      margin: 0 0 5px 0;
+      text-align: center;
+    }
+    main section button{
+      width: 0px;
+      flex-grow: 1;
+    }
+    footer{
+      padding: 10px 0;
+      text-align: center;
+      background: #bdf0f3;
+    }
+  </style>
+</head>
+<body>
+  <header><h1>google-page-translation-plus</h1></header>
+  <main>
+    <div class="notice">注意：点击下面的按钮翻译此页面然后使用，或者使用谷歌翻译输入网址翻译完使用。因本人技术有限本插件不支持用Chrome浏览器的左键菜单的翻译成XXX翻译的页面（虽然这种方式比谷歌翻译处理的效果好）。</div>
+    <section>
+      <h4>翻译</h4>
+      <button>处理&lt;per&gt;并翻译</button>
+      <button>直接翻译（不推荐）</button>
+    </section>
+    <section>
+      <h4>视图</h4>
+      <button>一</button>
+      <button>二</button>
+      <button>三</button>
+      <button>四</button>
+    </section>
+    <section>
+      <h4>功能</h4>
+      <button>编辑</button>
+      <button>保存</button>
+    </section>
+  </main>
+  <footer><a href="">在GitHub上×我</a></footer>
+</body>
+</html>

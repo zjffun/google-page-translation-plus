@@ -1,0 +1,23 @@
+{
+  "name": "google-page-translation-plus",
+  "version": "1.0.0",
+  "description": "对谷歌的页面翻译进行增强的插件。主要功能：水平并列、垂直并列展示翻译结果，鼠标悬停展示原文或译文，通过保存翻译前的格式修正代码块显示异常，保存翻译结果等。This is a plugin that enhances Google's page translation. The main function: Display of translation results side by side or top / bottom, Original with hover translation or translation with hover original, Correct the display of code block by saving the pre-translation format, Save the translation results,etc.",
+  "main": "popup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1010543618/google-page-translation-plus.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1010543618/google-page-translation-plus/issues"
+  },
+  "homepage": "https://github.com/1010543618/google-page-translation-plus#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^7.0.0"
+  }
+}

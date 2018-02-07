@@ -1,0 +1,17 @@
+{
+  "name" : "google-page-translation-plus",
+  "version" : "0",
+  "description" : "对谷歌的页面翻译进行增强的插件。主要功能：水平并列、垂直并列展示翻译结果，鼠标悬停展示原文或译文，通过保存翻译前的格式修正代码块显示异常，保存翻译结果等。",
+  "icons": {
+    "16": "img/icon16.png",             
+    "48": "img/icon48.png",            
+    "128": "img/icon128.png" 
+  },
+  "permissions": [],
+  "browser_action": {
+     "default_icon": "img/icon48.png",
+     "default_title": "Google Page Translation Plus",
+     "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
