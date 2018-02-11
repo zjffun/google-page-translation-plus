@@ -20,6 +20,12 @@ $(function(){
       });
     });
   });
+  $('#view_to').click(() => {
+    sendMessageToContentScript({cmd:'TO'});
+  });
+  $('#view_ot').click(() => {
+    sendMessageToContentScript({cmd:'OT'});
+  });
 });
 
 // 向content-script主动发送消息

@@ -7,7 +7,7 @@
     "48": "img/icon48.png",            
     "128": "img/icon128.png" 
   },
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "activeTab"],
   "browser_action": {
      "default_icon": "img/icon48.png",
      "default_title": "Google Page Translation Plus",

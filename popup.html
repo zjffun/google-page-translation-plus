@@ -40,6 +40,31 @@
       width: 0px;
       flex-grow: 1;
     }
+    .view i{
+      background-image: url(img/bvpics.gif);
+      display: block;
+      width: 25px;
+      height: 20px;
+      margin: auto;
+    }
+    .view button:hover{
+      background: #efc4c4;
+    }
+    .view button.active{
+      background: #e67f7f;
+    }
+    .view i.sbs{
+      background-position: -92px 0px;
+    }
+    .view i.tb{
+      background-position: -42px 0px;
+    }
+    .view i.ot{
+      background-position: -117px 0px;
+    }
+    .view i.to{
+      background-position: -67px 0px;
+    }
     footer{
       padding: 10px 0;
       text-align: center;
@@ -54,12 +79,12 @@
     <section>
       <button id="trans">翻译</button>
     </section>
-    <section>
+    <section class="view">
       <h4>视图</h4>
-      <button id="view_sbs">一</button>
-      <button id="view_tb">二</button>
-      <button id="view_ot">三</button>
-      <button id="view_to">四</button>
+      <button id="view_to"><i class="to" title="Translation with hover original"></i></button>
+      <button id="view_ot"><i class="ot" title="Original with hover translation"></i></button>
+      <button id="view_sbs" title="Side by side"><i class="sbs"></i></button>
+      <button id="view_tb"><i class="tb" title="Top / Bottom"></i></button>
     </section>
     <section>
       <h4>功能</h4>
