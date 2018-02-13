@@ -26,6 +26,12 @@ $(function(){
   $('#view_ot').click(() => {
     sendMessageToContentScript({cmd:'OT'});
   });
+  $('#view_oot').click(() => {
+    sendMessageToContentScript({cmd:'OOT'});
+  });
+  $('#func_edit').click(() => {
+    sendMessageToContentScript({cmd:'toggle_edit'});
+  });
 });
 
 // 向content-script主动发送消息

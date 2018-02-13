@@ -40,6 +40,10 @@
       width: 0px;
       flex-grow: 1;
     }
+    main section button.disabled{
+      background: #888 !important;
+      border: 1px #ccc solid !important;
+    }
     .view i{
       background-image: url(img/bvpics.gif);
       display: block;
@@ -73,23 +77,23 @@
   </style>
 </head>
 <body>
-  <header><h1>google-page-translation-plus</h1></header>
+  <header><h1>谷歌页面翻译增强</h1></header>
   <main>
-    <div class="notice">注意：</div>
     <section>
       <button id="trans">翻译</button>
     </section>
     <section class="view">
       <h4>视图</h4>
-      <button id="view_to"><i class="to" title="Translation with hover original"></i></button>
+      <button id="view_to"><i class="to" title="Translation with hover Original"></i></button>
       <button id="view_ot"><i class="ot" title="Original with hover translation"></i></button>
-      <button id="view_sbs" title="Side by side"><i class="sbs"></i></button>
-      <button id="view_tb"><i class="tb" title="Top / Bottom"></i></button>
+      <button id="view_oot"><i class="tb" title="Original on translation"></i></button>
+      <button id="view_sbs" title="未完成的Side by side" class="disabled"><i class="sbs"></i></button>
+      <button id="view_tb" title="未完成的Top / Bottom" class="disabled"><i class="tb"></i></button>
     </section>
     <section>
       <h4>功能</h4>
       <button id="func_edit">编辑</button>
-      <button id="func_save">保存</button>
+      <button id="func_save" title="太难做了，用自带的把" class="disabled">保存</button>
     </section>
   </main>
   <footer><a href="">在GitHub上×我</a></footer>

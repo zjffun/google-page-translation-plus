@@ -17,6 +17,7 @@
   [
     {
       "matches": ["<all_urls>"],
+      "css": ["css/content-style.css"],
       "js": ["js/jquery.min.js", "js/content-script.js"],
       "run_at": "document_start"
     }

@@ -1,0 +1,13 @@
+.gptp-color-red{
+  color: red !important;
+}
+.gptp-color-red *{
+  color: red !important;
+}
+
+.gptp-color-blue{
+  color: blue !important;
+}
+.gptp-color-blue *{
+  color: blue !important;
+}

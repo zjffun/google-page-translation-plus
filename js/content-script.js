@@ -22,11 +22,43 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
     $('[dh-lang=tran]').removeClass('google-src-text');
     $('[dh-lang=ori]').addClass('google-src-text');
   }
-  if(request.cmd == 'SS'){
+  if(request.cmd == 'OOT'){
     translated_page_pretreatment();
+    $('[dh-lang=ori]').removeClass('google-src-text');
+    $('[dh-lang=tran]').removeClass('google-src-text');
   }
-  if(request.cmd == 'TB'){
-    translated_page_pretreatment();
+  if(request.cmd == 'toggle_edit'){
+    console.log($('#gptp-is-edit'));
+    if ($('#gptp-is-edit').length) {
+      // 全部不可编辑
+      $('*').removeAttr('contenteditable');
+      // 改变文字颜色
+      $('[dh-lang=ori]').removeClass('gptp-color-red');
+      $('[dh-lang=tran]').removeClass('gptp-color-blue');
+      // 恢复原来的状态
+      $('[gptp-source-contenteditable=true]')
+        .removeAttr('gptp-source-contenteditable')
+        .attr('contenteditable', 'true');
+      $('[gptp-source-contenteditable=false]')
+        .removeAttr('gptp-source-contenteditable')
+        .attr('contenteditable', 'false');
+      // 去除可编辑flag
+      $('#gptp-is-edit').remove();
+    }else{
+      translated_page_pretreatment();
+      // 改变文字颜色
+      $('[dh-lang=ori]').addClass('gptp-color-red');
+      $('[dh-lang=tran]').addClass('gptp-color-blue');
+      // 保存原来的状态
+      $('[contenteditable=true]')
+        .attr('gptp-source-contenteditable', 'true');
+      $('[contenteditable=false]')
+        .attr('gptp-source-contenteditable', 'false');
+      // 全部可编辑
+      $('*').attr('contenteditable', 'true');
+      // 可编辑flag
+      $('body').append('<div id="gptp-is-edit"></div>');
+    }
   }
 });
 
@@ -84,7 +116,7 @@ function translated_page_pretreatment(){
     // 添加处理过的标识
     $('body').append('<div id="gptp_pretreatmented"></div>');
   }else{
-    alert('请先点击翻译翻译界面');
+    alert('请先点击《翻译》翻译此网页');
   }
 }
 
