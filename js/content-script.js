@@ -72,6 +72,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
       $('body').append('<div id="gptp-is-edit"></div>');
     }
   }
+  if(request.cmd == 'replace_pre'){
+     replace_pre_html()
+  }
 });
 
 $(function(){

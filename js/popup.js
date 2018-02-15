@@ -32,6 +32,16 @@ $(function(){
   $('#func_edit').click(() => {
     sendMessageToContentScript({cmd:'toggle_edit'});
   });
+  $('#func_save_pre').click(() => {
+    sendMessageToContentScript({cmd:'trans_pre'}, (response) => {
+      console.log('#trans收到来自content-script的回复：'+response);
+      localStorage.pre_tag = response;
+      alert('保存成功');
+    });
+  });
+  $('#func_replace_pre').click(() => {
+    sendMessageToContentScript({cmd:'replace_pre'});
+  });
 });
 
 // 向content-script主动发送消息

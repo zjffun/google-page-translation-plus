@@ -40,6 +40,10 @@
       width: 0px;
       flex-grow: 1;
     }
+    main section div{
+      display: flex;
+      width: 100%;
+    }
     main section button.disabled{
       background: #888 !important;
       border: 1px #ccc solid !important;
@@ -94,6 +98,10 @@
       <h4>功能</h4>
       <button id="func_edit">编辑</button>
       <button id="func_save" title="太难做了，用自带的把" class="disabled">保存</button>
+      <div>
+        <button id="func_save_pre">保存当前pre</button>
+        <button id="func_replace_pre">替换为保存的pre</button>
+      </div>
     </section>
   </main>
   <footer><a href="">在GitHub上×我</a></footer>
